@@ -73,11 +73,11 @@
 
                       title = new Chartist.Svg("text");
                       title.addClass(options.axisX.axisClass);
-                      title.text(options.axisX.axisTitle);
                       title.attr({
                           x: xPos + options.axisX.offset.x,
                           y: yPos + options.axisX.offset.y,
-                          "text-anchor": options.axisX.textAnchor
+                          "text-anchor": options.axisX.textAnchor,
+                          "translation": options.axisX.axisTitle
                       });
 
                       data.svg.append(title, true);
@@ -103,12 +103,12 @@
 
                       title = new Chartist.Svg("text");
                       title.addClass(options.axisY.axisClass);
-                      title.text(options.axisY.axisTitle);
                       title.attr({
                           x: xPos + options.axisY.offset.x,
                           y: yPos + options.axisY.offset.y,
                           transform: transform,
-                          "text-anchor": options.axisY.textAnchor
+                          "text-anchor": options.axisY.textAnchor,
+                          "translation": options.axisY.axisTitle
                       });
 
                       data.svg.append(title, true);
